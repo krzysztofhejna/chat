@@ -3,8 +3,8 @@ import React, { Component } from 'react';
 import styles from './UserForm.css';
 
 class UserForm extends Component {
-    constructor(props) {
-        super(props);
+    constructor() {
+        super();
         this.state = {
             name: ''
         };
