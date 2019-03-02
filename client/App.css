@@ -1,0 +1,57 @@
+body {
+    margin: 0;
+}
+
+.App {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    height: 100vh;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.AppHeader {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+    background-color: #2E1A47;
+}
+
+.AppTitle {
+    display: flex;
+    width: 25vw;
+    border-right: 1px solid #EED484;
+    justify-content: center;
+    box-sizing: border-box;
+    padding: 20px;
+    background-color: #2E1A47;
+    color: #EED484;
+    font-size: 20px;
+}
+
+.AppRoom {
+    display: flex;
+    width: 75vw;
+    justify-content: center;
+    box-sizing: border-box;
+    padding: 20px;
+    background-color: #2E1A47;
+    color: #EED484;
+    font-size: 20px;
+}
+
+.AppBody {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    background-color: #2E1A47;
+}
+
+.MessageWrapper {
+    display: flex;
+    flex-direction: column;
+    width: 75vw;
+    flex: 3;
+    background-color: #EED484;
+}

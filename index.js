@@ -5,21 +5,24 @@ const socketIo = require('socket.io');
 const app = express();
 const server = http.createServer(app);
 const io = socketIo(server);
+const UsersService = require('./UsersService');
+
+const usersService = new UsersService();
 
 app.use(express.static(`${__dirname}/public`));
 
 app.get('/', (req, res) => {
-  res.sendFile(`${__dirname}/index.html`);
+  res.sendFile(`${__dirname}/public/index.html`);
 });
 
 io.on('connection', (socket) => {
   socket.on('join', (name) => {
     usersService.addUser({
-        id: socket.id,
-        name
+      id: socket.id,
+      name
     });
     io.emit('update', {
-        users: usersService.getAllUsers()
+      users: usersService.getAllUsers()
     });
   });
 });
